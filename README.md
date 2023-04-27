@@ -39,7 +39,7 @@ Or search it in the IDE marketplace for “DGS” & “DGT-Codegen”
 
 ## Schema.graphqls
 
-Add [schema.graphqls](https://drive.google.com/file/d/1BmKO1ceKVyYAw29wI31SFVvD262aFkMX/view?usp=share_link) file in path `“resources/graphql/”`. If the path doesn't exist create the graphql folder under the resources folder and place the file.
+Add schema file in path `“resources/graphql/”`. If the path doesn't exist create the graphql folder under the resources folder and place the file.
 
 Make sure the contents of the .graphqls files are correct and without any typos.
 
@@ -67,7 +67,7 @@ This plugin is built by a community member “[deweyjose](https://github.com/dew
 		    <typeMapping>
 			    <MessageConnection>graphql.relay.SimpleListConnection&lt;Message&gt;</MessageConnection>
 		    </typeMapping>
-		    <packageName>com.redhat.codegenpoc</packageName>
+		    <packageName>com.shamsu.codegenpoc</packageName>
 		    <outputDir>${project.build.directory}</outputDir>
 	    </configuration>
     </plugin>
@@ -98,7 +98,7 @@ Go to maven->Plugins->graphqlcodegen->expand and run the maven “graphqlcodegen
 
 After a successful build you can see the generated java files and dataFetchers files created based on schema provided in the `resources/ghaphql` folder and in the configuration provided in the `pom.xml` file inside tag `<schemaPaths>` are generated under the target folder.
 
-For development process one can copy these generated files under `src/main/java/com/redhat/codegenPOC/graph/schema||query||mutation` and place `DgsConstants.java` in the `src/main/java/com/redhat/codegenPOC/` path.
+For development process one can copy these generated files under `src/main/java/com/shamsu/codegenPOC/graph/schema||query||mutation` and place `DgsConstants.java` in the `src/main/java/com/shamsu/codegenPOC/` path.
 
 ## Logic and data layer implementation
 
