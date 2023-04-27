@@ -1,0 +1,53 @@
+directive @connection on OBJECT
+
+type Message @connection {
+    id: ID!
+    name: String
+    content: String
+}
+
+input MessageFilter {
+    """
+    Filter products based on ID
+    """
+    ids: [ID!]
+    """
+    Filter products based on name
+    """
+    names: [String!]
+}
+
+type Query {
+    """
+    Get Message By ID
+    """
+    message(
+        """
+        Message ID
+        """
+        id: ID!
+    ): Message
+
+    """
+    Get messages as list. All or just specified by 'ids' argument.
+    Returned list has exactly same length and order as input argument.
+    """
+    messageList(
+        """
+        Message IDs e.g. '1'
+        """
+        ids: [ID!]
+    ): [Message!]!
+
+    """
+    Connection of Messages
+    """
+    messages(
+        first: Int = 10
+        after: String
+        """
+        Filter result
+        """
+        filter: MessageFilter
+    ): MessageConnection!
+}
