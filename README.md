@@ -2,6 +2,11 @@
 
 A step by step guide to integrate codegen with pagination
 
+## Running this specific project
+
+If you have already checked out this repo, you may do a `maven clean install` and you are good to run it as springboot application.
+otherwise you may follow the below provided instructions to make one from scratch.
+
 ## Generating Base Project
 
 Generate a Spring Boot maven java 17 project with dependencies Springweb and Lombok from [https://start.spring.io/](https://start.spring.io/)
